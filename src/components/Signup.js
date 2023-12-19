@@ -16,11 +16,17 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:3000/auth/signup',
+        'http://localhost:8080/auth/signup',
         formData
       );
-      console.log(response.data); // Handle success response
+      const data = await response.data;
+
+      if (data) {
+        alert('Signup successful');
+        window.location.href = '/login';
+      }
     } catch (error) {
+      alert('Please fill both username and password');
       console.error(error); // Handle error
     }
   };

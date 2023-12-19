@@ -24,7 +24,7 @@ const Login = () => {
       if (data.token) {
         localStorage.setItem('token', data.token);
         alert('Login successful');
-        window.location.href = '/';
+        window.location.href = '/newmoment';
       }
     } catch (error) {
       alert('Please check your username and password');

@@ -28,9 +28,9 @@ const NewMoment = () => {
         'http://localhost:8080/moment/add',
         formDataToSend
       );
-      console.log(response.data); // Handle success response
+      console.log(response.data);
     } catch (error) {
-      console.error(error); // Handle error
+      console.error(error);
     }
   };
 
